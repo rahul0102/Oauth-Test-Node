@@ -68,6 +68,7 @@
               if(user.google.thumbnail) thumbnail = user.google.thumbnail;
               else if(user.facebook.thumbnail) thumbnail = user.facebook.thumbnail;
               else if (user.twitter.thumbnail) thumbnail = user.twitter.thumbnail;
+              else if (user.github.thumbnail) thumbnail = user.github.thumbnail;
               else
             %>
             <img src="<%= thumbnail %>" />

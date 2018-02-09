@@ -40,11 +40,19 @@ router.get('/facebook/redirect', passport.authenticate('facebook'), (req,res) =>
 router.get('/twitter', passport.authenticate('twitter'));
 
 router.get('/twitter/redirect', passport.authenticate('twitter'), (req,res) => {
-  res.redirect('/profile', {user : req.user});
+  res.redirect('/profile');
 });
 //end twitter-auth-login
 
+//github-auth-Login
+router.get('/github', passport.authenticate('github',{
+  scope: ['user : email']
+}));
 
+router.get('/github/redirect', passport.authenticate('github'), (req,res) => {
+  res.redirect('/profile');
+});
+//end github-auth-Login
 //logout
 router.get('/logout', (req,res) => {
   //handle with passport

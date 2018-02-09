@@ -15,6 +15,10 @@ const userSchema = new Schema({
   twitter : {
     id : String,
     thumbnail : String
+  },
+  github : {
+    id : String,
+    thumbnail : String
   }
 });
 
