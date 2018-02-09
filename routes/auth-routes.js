@@ -63,6 +63,18 @@ router.get('/linkedin/redirect', passport.authenticate('linkedin'), (req, res) =
 });
 //end linkedin-auth-Login
 
+
+//instagram-auth-Login
+
+router.get('/instagram', passport.authenticate('instagram'));
+
+router.get('/instagram/redirect', passport.authenticate('instagram'), (req, res) => {
+
+  res.redirect('/profile');
+});
+//end instagram-auth-Login
+
+
 //logout
 router.get('/logout', (req,res) => {
   //handle with passport

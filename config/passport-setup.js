@@ -4,6 +4,7 @@ const passportFacebook = require('./facebook-auth');
 const passportTwitter = require('./twitter-auth');
 const passportGithub = require('./github-auth');
 const passportlinkedin = require('./linkedin-auth');
+const passportInstagram = require ('./instagram-auth');
 const keys = require('./keys');
 const User = require('../models/user-model');
 

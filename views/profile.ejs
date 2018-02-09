@@ -70,10 +70,16 @@
               else if (user.twitter.thumbnail) thumbnail = user.twitter.thumbnail;
               else if (user.github.thumbnail) thumbnail = user.github.thumbnail;
               else if (user.linkedin.thumbnail) thumbnail = user.linkedin.thumbnail;
+              else if (user.instagram.thumbnail) thumbnail = user.instagram.thumbnail;
               else
             %>
             <img src="<%= thumbnail %>" />
             <p>This is your profile thumbnail</p>
+            <br><br>
+            <% if (user.instagram.bio) { %>
+            <h2> Your Instagram Bio : </h2>
+            <h3> <%= user.instagram.bio %> </h3>
+            <% } %>
         </main>
     </body>
 </html>

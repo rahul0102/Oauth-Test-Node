@@ -23,6 +23,12 @@ const userSchema = new Schema({
   linkedin : {
     id : String,
     thumbnail : String
+  },
+  instagram : {
+    id: String,
+    fullName : String,
+    bio : String,
+    thumbnail : String
   }
 });
 
