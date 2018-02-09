@@ -53,6 +53,16 @@ router.get('/github/redirect', passport.authenticate('github'), (req,res) => {
   res.redirect('/profile');
 });
 //end github-auth-Login
+
+//linkedin-auth-Login
+
+router.get('/linkedin', passport.authenticate('linkedin'));
+
+router.get('/linkedin/redirect', passport.authenticate('linkedin'), (req, res) => {
+  res.redirect('/profile');
+});
+//end linkedin-auth-Login
+
 //logout
 router.get('/logout', (req,res) => {
   //handle with passport

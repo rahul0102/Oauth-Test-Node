@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const authCheck = (req, res, next) => {
+const isAuthenticated = (req, res, next) => {
   if (!req.user){ // if req object does not contain user
     //if user not logged in
     res.redirect('/auth/login'); //redirect him to login page
@@ -11,7 +11,7 @@ const authCheck = (req, res, next) => {
 };
 
 //using authCheck middleware here to verify if user is logged in or not
-router.get('/', authCheck, (req, res) => {
+router.get('/', isAuthenticated, (req, res) => {
   res.render('profile', {user : req.user});
 //  res.send('Hi welcome to your profile ' + req.user.username);
 });

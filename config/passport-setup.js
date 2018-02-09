@@ -3,6 +3,7 @@ const passportGoogle = require('./google-auth');
 const passportFacebook = require('./facebook-auth');
 const passportTwitter = require('./twitter-auth');
 const passportGithub = require('./github-auth');
+const passportlinkedin = require('./linkedin-auth');
 const keys = require('./keys');
 const User = require('../models/user-model');
 

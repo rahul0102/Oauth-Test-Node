@@ -19,6 +19,10 @@ const userSchema = new Schema({
   github : {
     id : String,
     thumbnail : String
+  },
+  linkedin : {
+    id : String,
+    thumbnail : String
   }
 });
 
